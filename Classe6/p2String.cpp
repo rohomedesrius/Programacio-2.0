@@ -6,9 +6,11 @@ p2String::p2String() : string(NULL), size(0){
 }
 
 p2String::p2String(const char* _string){
-		
 	
+	size = strlen(_string) + 1;
+	this->string = new char[size];
 
+	strcpy(this->string, _string);
 }
 
 p2String::p2String(uint _size){
